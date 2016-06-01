@@ -1,0 +1,70 @@
+% 預設的字型大小、紙張大小，文件類型為 article、簡報通常為 beamer, 寫書：book, 長篇報告：report, 信件：letter
+\documentclass[12pt, letterpaper]{article}
+% 此文件的編碼，建議使用 UTF-8
+\usepackage[utf8]{inputenc}
+
+% 中文與字型設定
+\usepackage{xeCJK}
+    % 設定中文字型
+\setCJKmainfont[ Path = ./fonts/]{BiauKai.ttf}
+    % 設定英文字型
+\setmainfont[ Path = ./fonts/]{Times New Roman.ttf}
+
+% 引入註解套件
+\usepackage{comment}
+
+% 文章標題設定
+\title{\LaTeX 光速入門}
+\author{呂栢頤 \thanks{感謝 ShareLaTeX team 與炎龍老師的文獻}}
+\date{\today}
+
+\begin{document}
+
+% 建立標題
+\begin{titlepage}
+\maketitle
+\end{titlepage}
+
+% 摘要
+\begin{abstract}
+大家好，我是呂栢頤，目前任職於中華電信研究院。這份教學將帶大家很快的了解 \LaTeX 的一些基本操作，並提供一個簡易的模板讓大家使用！
+\end{abstract}
+
+% 註解
+\begin{comment}
+這裡的文字不會顯示在文章中， \LaTeX 裡註解的方法除了 \% 外，這也是一個常用的多行註解方式，需要搭配 \textit{comment} 套件。
+\end{comment}
+
+\section{引言}
+這裡，讓我很快速的按照 \textit{SHARELATEX} 教學文件讓大家瞭解 \LaTeX 一些性質。
+
+文章的「段落」與「空行」：
+
+『因為在推文看到 "迪士尼告死小老百姓"的事情，決定打一篇。迪士尼超級注重版權，在商業的層面上啦。你沒經過迪士尼授權隨便印個米老鼠在內褲上賣給小女孩，這個會被告。你沒經過迪士尼授權在P網畫了18禁的高飛圖（很顯然也不會授權給你），有點危險，但真的有人被告過嗎？目前還沒有。看看deviantart 看看 PIXIV，一堆都活的好好的啊...』
+
+從這裡開始是第二段，上面那篇是從 ptt C 洽版的 \textit{OlaOlaOlaOla} 所發的文章。第二段在 M\$ Word 裡面其實就是 `enter' 指令，有時候我們不想分段時就會用到 `shift-enter'，這在 \LaTeX 裡面只要輸入 $\backslash$ $\backslash$ 就好囉，像這樣 \\
+有看到了嗎？新的一行就這樣展開惹 $\textasciitilde$ $\textasciitilde$ 更進一步，在 Word 裡面會使用 `ctrl-enter' 換到下一面，這個也可以利用 $\backslash$ newpage 辦到，像這樣 \newpage
+
+新的一頁就出來囉！
+
+另外有些符號是不能直接使用的，我們通常稱做「功能符號」：
+
+\begin{itemize}
+\item \#：套件參數指令，我們可以像是定義函數一樣定義新的指令，詳見 $\backslash$command 的操作
+\item \$：啟用數學模式，最吸引人的功能！詳見之後的章節
+\item \%：註解，我剛剛其實已經偷偷用了喔 $\textasciicircum$ \_ $\textasciicircum$
+\item $\textasciicircum$：數學模式中的上標(指數)位置
+\item \&：表格的欄位切割指令，詳見之後的章節
+\item \_：數學模式中的下標(底數)位置
+\item \{ \}：使用指令需要分隔的區域，指令的括號
+\item $\textasciitilde$：小空格
+\item $\backslash$：指令開始時所下的參數
+\end{itemize}
+
+很多人害怕 \LaTeX 是害怕他的指令與操作模式，但是其實沒那麼難，我個人還覺得一直打字不需要滑鼠是件幸福的事呢。
+
+下一章是本文件最可怕(？)的地方，就是 \LaTeX 的安裝，其實現在已經變得很簡單了，只是要怎麼從零開始打造 \LaTeX 文件呢？讓我們繼續看下去...
+
+\section{\LaTeX 的安裝與環境}
+
+\end{document}
